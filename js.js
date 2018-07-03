@@ -75,13 +75,13 @@
     };
   }
 
-  var startLabel = document.querySelector('#goal-current');
+  //var startLabel = document.querySelector('#goal-current');
   var goalLabel = document.querySelector('#goal-total');
   var goalStart = document.querySelector('#goal-start');
   var goalLeft = document.querySelector('#goal-left');
   var progress = document.querySelector('#goal-progress');
-  var title = document.querySelector('#title');
-  var timer = document.querySelector('#goal-end-date');
+  //var title = document.querySelector('#title');
+  //var timer = document.querySelector('#goal-end-date');
 
   function updateData(data) {
     var p = (data.amount.current - data.amount.start) / (data.amount.target - data.amount.start) * 100;
@@ -89,17 +89,17 @@
     if (p < 0) p = 0;
     if (p > 100) p = 100;
 
-    title.innerHTML = data.title;
+    //title.innerHTML = data.title;
     setEndDate(data.to_go.ends_at);
 
     var formatted = formatGoalNumber(data);
-    startLabel.textContent = formatted.start;
-    goalLabel.textContent = formatted.target;
+    //startLabel.textContent = formatted.start;
+    goalLabel.textContent = kFormatter(formatted.target);
 
     goalStart.style.width = p + '%';
     goalLeft.style.width = 100 - p + '%';
 
-    progress.textContent = formatted.current + ' (' + Math.floor(origP) + '%)';
+    progress.textContent = kFormatter(formatted.current); // + ' (' + Math.floor(origP) + '%)';
 
     var width = goalStart.parentNode.getBoundingClientRect().width;
     var offset = width * p / 100;
@@ -107,8 +107,12 @@
     if (width - offset <= 16) goalStart.classList.add('close-to-end');else goalStart.classList.remove('close-to-end');
   }
   function setEndDate(date) {
-    timer.textContent = getRelativeEndDate(date);
+    //timer.textContent = getRelativeEndDate(date);
   }
+
+  function kFormatter(num) {
+    return num > 999 ? (num/1000).toFixed(1) + 'k' : num
+}
 
   function eventListener(e) {
     updateData(e.detail);

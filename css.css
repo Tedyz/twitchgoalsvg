@@ -22,9 +22,9 @@ body {
 
     height: 100%;
     align-items: center;
-    background-image: url("https://i.imgur.com/MHJ5hwU.png");
+    background-image: url("https://github.com/Tedyz/twitchgoalsvg/blob/master/images/HEART%20(1).png?raw=true");
     background-repeat: no-repeat;
-    background-position: 22px 10px;
+    background-position: 25px 10px;
 }
 
 .bar {
@@ -86,8 +86,6 @@ body {
   }
   #goal-start > img,
   #goal-left > img {
-    
-    height: 25px;
     -webkit-filter: drop-shadow(0 0 1px transparent);
             filter: drop-shadow(0 0 1px transparent);
   }
