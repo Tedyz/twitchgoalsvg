@@ -99,6 +99,9 @@
     goalStart.style.width = p + '%';
     goalLeft.style.width = 100 - p + '%';
 
+    console.log('start ' + goalStart.style.width);
+    console.log('left ' + goalLeft.style.width);
+
     progress.textContent = kFormatter(formatted.current); // + ' (' + Math.floor(origP) + '%)';
 
     var width = goalStart.parentNode.getBoundingClientRect().width;

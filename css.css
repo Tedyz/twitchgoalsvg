@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Gibson");
+/* // @import url("https://fonts.googleapis.com/css?family=Gibson"); */
 body {
     font-family: "Gibson", sans-serif;
     font-size: 14px;
@@ -24,7 +24,7 @@ body {
     align-items: center;
     background-image: url("https://github.com/Tedyz/twitchgoalsvg/blob/master/images/HEART%20(1).png?raw=true");
     background-repeat: no-repeat;
-    background-position: 25px 10px;
+    background-position: 30px 7px;
 }
 
 .bar {
@@ -58,34 +58,46 @@ body {
 
 
 #goal-bar {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    overflow: hidden;
+  width: 272px;
+  height: 31px;
+  line-height: 21px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  overflow: hidden;
   }
   #goal-start {
     display: inline-block;
     height: 100%;
     position: relative;
-    padding-top: 15px;
     width: 70%;
     transition: width 1s;
     overflow: hidden;
   }
   #goal-left {
     display: inline-block;
-    padding-top: 15px;
     height: 100%;
     position: relative;
     width: 30%;
     transition: width 1s;
     overflow: hidden;
   }
+  /* #goal-start,
+#goal-left {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 0;
+  transition: width 1s;
+  overflow: hidden;
+} */
   #goal-start > img,
   #goal-left > img {
+    width: 272px;
+    height: 31px;
     -webkit-filter: drop-shadow(0 0 1px transparent);
             filter: drop-shadow(0 0 1px transparent);
   }
